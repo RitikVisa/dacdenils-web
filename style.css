@@ -327,3 +327,33 @@ h2 {
   box-shadow: 2px 2px 10px #33333379;
   font-family: "Poppins", sans-serif;
 }
+
+/* scroll effect */
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate(80%);
+  transition: all 1.5s;
+}
+
+.hidden-2{
+  opacity: 0;
+  filter: blur(2px);
+  transform: translate(-100% );
+  transition: all 1.5s;
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0);
+}
+
+.card:nth-child(2){
+  transition-delay: 200ms;
+}
+
+.card:nth-child(3){
+  transition-delay: 400ms;
+}
+
