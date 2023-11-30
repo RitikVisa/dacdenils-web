@@ -331,52 +331,110 @@ h2 {
 }
 
 /* scroll effect */
-.hidden{
+.hidden {
   opacity: 0;
   filter: blur(5px);
   transform: translate(80%);
   transition: all 1.5s;
 }
 
-.hidden-2{
+.hidden-2 {
   opacity: 0;
   filter: blur(2px);
-  transform: translate(-100% );
+  transform: translate(-100%);
   transition: all 1.5s;
 }
 
-.show{
+.show {
   opacity: 1;
   filter: blur(0);
   transform: translate(0);
 }
 
-.card:nth-child(2){
+.card:nth-child(2) {
   transition-delay: 200ms;
 }
 
-.card:nth-child(3){
+.card:nth-child(3) {
   transition-delay: 400ms;
 }
 
-@media only screen and (max-width: 320px) {
+.mobile-nav {
+  z-index: 80;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  display: none;
+}
+
+#show {
+  display: none;
+}
+
+@media only screen and (max-width: 454px) {
   /* Styles specific to devices with a maximum width of 600 pixels */
+  #show {
+    display: flex;
+  }
+  #close {
+    margin-right: 1rem;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    text-align: start;
+  }
 
-  .left{
+  .navbar a {
     display: none;
   }
-  .right{
+  .mobile-nav {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 70vw;
+    background-color: rgba(0, 0, 0, 0.973);
+    backdrop-filter: blur (100px);
+    opacity: 100%;
+  }
+
+  .mobile-nav a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .empty {
+    width: 50%;
+  }
+  .cross-icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cross-icon button {
+    height: 100%;
+    padding: 5px;
+  }
+
+  .left {
+    display: none;
+  }
+  .right {
     display: none;
   }
 
-  .text-overlay h1{
+  .text-overlay h1 {
     font-size: 1rem;
   }
-  .text-overlay p{
+  .text-overlay p {
     font-size: 0.6rem;
     display: none;
   }
-  .visit-button{
+  .visit-button {
     width: 50vw;
   }
 
@@ -402,7 +460,6 @@ h2 {
     align-items: center;
   }
 
- 
   .about-right img {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -411,7 +468,7 @@ h2 {
   }
 
   #gallery {
-    display:flex;
+    display: flex;
     flex-direction: column;
     padding: 2rem;
   }
@@ -446,7 +503,7 @@ h2 {
     font-style: italic;
     color: #333;
   }
-  .para{
+  .para {
     font-size: 0.6rem;
     font-weight: 400;
   }
@@ -484,5 +541,4 @@ h2 {
     height: 400px;
     margin: 0;
   }
-
 }
